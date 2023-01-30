@@ -16,7 +16,7 @@ public class HelloApiTest {
         ResponseEntity<String> result = testRestTemplate.getForEntity("http://localhost:8080/hello?name={name}", String.class, "Spring");
 
         assertAll(() -> {
-            assertEquals("Complex Hello, Spring", result.getBody());
+            assertEquals("*Complex Hello, Spring*", result.getBody());
             assertEquals(200, result.getStatusCodeValue());
         });
     }
