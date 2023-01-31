@@ -1,6 +1,6 @@
 package helloboot.tobyspringboot;
 
-import org.springframework.stereotype.Component;
+import helloboot.config.MyComponent;
 
 @MyComponent
 public class ComplexHelloService implements HelloService {

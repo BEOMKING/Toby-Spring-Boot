@@ -5,7 +5,8 @@ import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-public class MySpringBootApplication {
+public class MySpringApplication {
+    // Spring Container
     public static void run(final Class<?> springBootApplicationClass, final String[] args) {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext() {
             @Override
