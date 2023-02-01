@@ -8,6 +8,6 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class DispatcherServletConfig {
     @Bean
     public DispatcherServlet dispatcherServlet() {
-        return new DispatcherServlet(ƒ);
+        return new DispatcherServlet();
     }
 }
