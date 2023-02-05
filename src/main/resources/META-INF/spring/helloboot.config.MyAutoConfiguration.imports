@@ -1,2 +1,3 @@
 helloboot.config.autoconfig.DispatcherServletConfig
 helloboot.config.autoconfig.TomcatWebServerConfig
+helloboot.config.autoconfig.JettyWebServerConfig
