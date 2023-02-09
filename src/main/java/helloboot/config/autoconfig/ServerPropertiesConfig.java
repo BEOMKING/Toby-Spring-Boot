@@ -1,0 +1,14 @@
+package helloboot.config.autoconfig;
+
+import helloboot.config.MyAutoConfiguration;
+import org.springframework.boot.context.properties.bind.Binder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
+
+@MyAutoConfiguration
+public class ServerPropertiesConfig {
+    @Bean
+    ServerProperties serverProperties(Environment environment) {
+        return Binder.get(environment).bind("", ServerProperties.class).get();
+    }
+}
