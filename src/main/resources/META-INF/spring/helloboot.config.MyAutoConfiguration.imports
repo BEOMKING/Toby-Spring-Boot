@@ -3,4 +3,4 @@ helloboot.config.autoconfig.TomcatWebServerConfig
 helloboot.config.autoconfig.JettyWebServerConfig
 helloboot.config.autoconfig.UndertowWebServerConfig
 helloboot.config.autoconfig.PropertyPlaceholderConfig
-helloboot.config.autoconfig.ServerPropertiesConfig
+helloboot.config.autoconfig.PropertyPostProcessorConfig

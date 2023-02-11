@@ -1,8 +1,8 @@
 package helloboot.config.autoconfig;
 
 import helloboot.config.ConditionalMyOnClass;
+import helloboot.config.EnableMyConfigurationProperties;
 import helloboot.config.MyAutoConfiguration;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
@@ -10,13 +10,14 @@ import org.springframework.context.annotation.Bean;
 
 @MyAutoConfiguration
 @ConditionalMyOnClass("org.apache.catalina.startup.Tomcat")
+@EnableMyConfigurationProperties(ServerProperties.class)
 public class TomcatWebServerConfig {
 
     @Bean("tomcatServletWebServerFactory")
     @ConditionalOnMissingBean
     public ServletWebServerFactory servletWebServerFactory(ServerProperties serverProperties) {
         TomcatServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
-        serverFactory.setContextPath(serverProperties.contextPath);
+        serverFactory.setContextPath(serverProperties.contextPath);f
         serverFactory.setPort(serverProperties.port);
         return serverFactory;
     }

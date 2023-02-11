@@ -1,5 +1,8 @@
 package helloboot.config.autoconfig;
 
+import helloboot.config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
     String contextPath;
     int port;
