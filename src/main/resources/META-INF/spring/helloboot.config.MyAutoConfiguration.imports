@@ -4,3 +4,5 @@ helloboot.config.autoconfig.JettyWebServerConfig
 helloboot.config.autoconfig.UndertowWebServerConfig
 helloboot.config.autoconfig.PropertyPlaceholderConfig
 helloboot.config.autoconfig.PropertyPostProcessorConfig
+helloboot.config.autoconfig.DataSourceConfig
+helloboot.config.autoconfig.MyDataSourceProperties

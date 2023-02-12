@@ -10,6 +10,10 @@ sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
+    maven {
+        url 'https://repo.clojars.org'
+        name 'Clojars'
+    }
 }
 
 dependencies {
@@ -17,8 +21,13 @@ dependencies {
 //        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
     }
 
+    implementation('org.springframework.boot:spring-boot-starter-jdbc')
+
     // mybatis
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+    runtimeOnly 'com.h2database:h2:2.1.214'
+    runtimeOnly 'hikari-cp:hikari-cp:3.0.1'
+
 
     // jetty
 //    implementation 'org.springframework.boot:spring-boot-starter-jetty'

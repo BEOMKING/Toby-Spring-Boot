@@ -8,7 +8,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class HelloServiceTest {
     @Test
     void simpleHelloServiceTest() {
-        HelloService helloService = new SimpleHelloService();
+        HelloService helloService = new SimpleHelloService(new HelloRepository() {
+            @Override
+            public Hello findHello(final String name) {
+                return null;
+            }
+
+            @Override
+            public void increaseHello(final String name) {
+
+            }
+        });
 
         String ret = helloService.sayHello("Spring");
 

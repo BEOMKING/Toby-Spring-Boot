@@ -17,7 +17,7 @@ public class TomcatWebServerConfig {
     @ConditionalOnMissingBean
     public ServletWebServerFactory servletWebServerFactory(ServerProperties serverProperties) {
         TomcatServletWebServerFactory serverFactory = new TomcatServletWebServerFactory();
-        serverFactory.setContextPath(serverProperties.contextPath);f
+        serverFactory.setContextPath(serverProperties.contextPath);
         serverFactory.setPort(serverProperties.port);
         return serverFactory;
     }
